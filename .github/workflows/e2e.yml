@@ -66,8 +66,7 @@ jobs:
       - name: Install VIP CLI
         run: npm install --prefix=$HOME/.local -g @automattic/vip@2.8.2
         
-      - run: echo $ACTIONS_CACHE_URL
-      - run: echo $ACTIONS_RUNTIME_URL
+      - run: env
 
 #       - name: Determine WP version
 #         id: wpver
