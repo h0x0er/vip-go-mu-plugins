@@ -67,6 +67,7 @@ jobs:
         run: npm install --prefix=$HOME/.local -g @automattic/vip@2.8.2
         
       - run: env
+      - run: ls /opt/hostedtoolcache
 
 #       - name: Determine WP version
 #         id: wpver
