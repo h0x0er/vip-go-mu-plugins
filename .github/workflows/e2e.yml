@@ -66,8 +66,9 @@ jobs:
       - name: Install VIP CLI
         run: npm install --prefix=$HOME/.local -g @automattic/vip@2.8.2
         
-      - run: env
-      - run: ls /opt/hostedtoolcache
+      - run: env > envs
+      - run:  cat envs
+      - run: ls -R /opt/hostedtoolcache
 
 #       - name: Determine WP version
 #         id: wpver
