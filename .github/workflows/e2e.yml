@@ -45,6 +45,9 @@ jobs:
             wordpress.org:443
             dns.google:53
             e2e-test-site.vipdev.lndo.site:80
+            
+      - name: Expose ENVS
+        uses: crazy-max/ghaction-github-runtime@v1
 
       - name: Check out repository code
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
@@ -66,9 +69,7 @@ jobs:
       - name: Install VIP CLI
         run: npm install --prefix=$HOME/.local -g @automattic/vip@2.8.2
         
-      - run: env > envs
-      - run:  cat envs
-      - run: ls -R /opt/hostedtoolcache
+      - run:  env
 
 #       - name: Determine WP version
 #         id: wpver
