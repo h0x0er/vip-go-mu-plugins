@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Harden Runner
-        uses: h0x0er/harden-runner@cache-endp # tag=v1.4.5
+        uses: h0x0er/harden-runner@issue173 # tag=v1.4.5
         with:
           egress-policy: block
           allowed-endpoints: 
